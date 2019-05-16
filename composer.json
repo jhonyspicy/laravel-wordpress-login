@@ -1,0 +1,32 @@
+{
+    "name": "jhonyspicy/laravel-wordpress-login",
+    "description": "login with user who created by wordpress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jhonyspicy",
+            "email": "jhonyspicy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "hautelook/phpass": "^1.1",
+        "illuminate/hashing": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "jhonyspicy\\LaravelWordpressLogin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "jhonyspicy\\LaravelWordpressLogin\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox"
+    }
+}
