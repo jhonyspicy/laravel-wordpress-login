@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use jhonyspicy\LaravelWordpressLogin\User;
 
-class PasswordTest extends TestCase
+class LoginTest extends TestCase
 {
     use RefreshDatabase;
 

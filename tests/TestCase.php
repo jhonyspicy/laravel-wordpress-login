@@ -1,7 +1,8 @@
 <?php
 namespace jhonyspicy\LaravelWordpressLogin\Tests;
 
-use jhonyspicy\LaravelWordpressLogin\PasswordHashProvider;
+use jhonyspicy\LaravelWordpressLogin\ForTestProvider;
+use jhonyspicy\LaravelWordpressLogin\PhpassHasherProvider;
 use jhonyspicy\LaravelWordpressLogin\User;
 
 class TestCase extends \Orchestra\Testbench\TestCase
@@ -22,7 +23,8 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            PasswordHashProvider::class,
+            ForTestProvider::class,
+            PhpassHasherProvider::class,
         ];
     }
 

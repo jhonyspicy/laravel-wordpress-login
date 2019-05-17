@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 class MakeHashTest extends TestCase
 {
     /** @test */
-    public function 既存のサンプルユーザーがログインできる()
+    public function ハッシュのチェック()
     {
         $this->assertTrue(Hash::check('yPxOG(7NW77%b!v%CMwQP#MW', '$P$BAEJQxlgehZdSE8bHGrajhFHfj0Y/20'));
         $this->assertTrue(Hash::check('RKTUABPdDkX1*HCuD@*3DStp', '$P$BQKoPo5GBV8i/F3x9YF2XL41dDeYKb.'));
