@@ -1,12 +1,12 @@
 <?php
 
 
-namespace jhonyspicy\LaravelWordpressLogin;
+namespace jhonyspicy\LaravelWordpressLogin\Tests\Resource;
 
 
 use Illuminate\Support\ServiceProvider;
 
-class ForTestProvider extends ServiceProvider
+class Provider extends ServiceProvider
 {
     /**
      * Bootstrap services.
@@ -16,6 +16,6 @@ class ForTestProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
     }
 }

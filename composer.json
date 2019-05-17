@@ -19,7 +19,13 @@
     "autoload": {
         "psr-4": {
             "jhonyspicy\\LaravelWordpressLogin\\": "src/"
-        }
+        },
+        "exclude-from-classmap": [
+            "/Tests/",
+            "/test/",
+            "/tests/",
+            "/database/"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

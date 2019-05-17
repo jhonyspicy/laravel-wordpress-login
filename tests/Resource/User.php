@@ -1,5 +1,5 @@
 <?php
-namespace jhonyspicy\LaravelWordpressLogin;
+namespace jhonyspicy\LaravelWordpressLogin\Tests\Resource;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

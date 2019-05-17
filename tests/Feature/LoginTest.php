@@ -4,7 +4,7 @@ namespace jhonyspicy\LaravelWordpressLogin\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
-use jhonyspicy\LaravelWordpressLogin\User;
+use jhonyspicy\LaravelWordpressLogin\Tests\Resource\User;
 
 class LoginTest extends TestCase
 {

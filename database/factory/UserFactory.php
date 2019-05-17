@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 use Illuminate\Support\Facades\Hash;
-use jhonyspicy\LaravelWordpressLogin\User;
+use jhonyspicy\LaravelWordpressLogin\Tests\Resource\User;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
