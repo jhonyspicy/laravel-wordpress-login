@@ -4,7 +4,7 @@ namespace jhonyspicy\LaravelWordpressLogin\Tests;
 
 use Illuminate\Support\Facades\Hash;
 
-class MakeHashTest extends TestCase
+class HashTest extends TestCase
 {
     /** @test */
     public function ハッシュのチェック()
