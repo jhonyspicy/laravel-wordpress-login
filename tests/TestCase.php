@@ -28,6 +28,11 @@ class TestCase extends \Orchestra\Testbench\TestCase
         ];
     }
 
+    /**
+     * configの値を書き換える。
+     *
+     * @param \Illuminate\Foundation\Application $app
+     */
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('database.default', 'testdb');
