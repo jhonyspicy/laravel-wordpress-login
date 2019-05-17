@@ -41,5 +41,6 @@
                 "jhonyspicy\\LaravelWordpressLogin\\PhpassHasherProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
