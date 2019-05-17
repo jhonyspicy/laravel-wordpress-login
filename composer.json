@@ -28,5 +28,12 @@
     },
     "scripts": {
         "test": "phpunit --testdox"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "jhonyspicy\\LaravelWordpressLogin\\PhpassHasherProvider"
+            ]
+        }
     }
 }
