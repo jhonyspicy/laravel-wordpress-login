@@ -14,7 +14,6 @@ class TestCase extends \Orchestra\Testbench\TestCase
         $this->withFactories(__DIR__ . '/../database/factory');
     }
 
-
     /**
      * @param \Illuminate\Foundation\Application $app
      *
