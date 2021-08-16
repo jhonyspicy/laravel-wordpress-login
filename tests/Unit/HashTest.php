@@ -24,7 +24,7 @@ class HashTest extends TestCase
 
         $this->assertNotEquals($hashed1, $hashed2);
 
-        $this->assertRegExp('/^\$(P|H)\$/', $hashed1);
-        $this->assertRegExp('/^\$(P|H)\$/', $hashed2);
+        $this->assertMatchesRegularExpression('/^\$(P|H)\$/', $hashed1);
+        $this->assertMatchesRegularExpression('/^\$(P|H)\$/', $hashed2);
     }
 }
