@@ -10,8 +10,8 @@
     ],
     "require": {
         "php": "^7.2|^8.0",
-        "hautelook/phpass": "^1.1",
-        "illuminate/hashing": "^6.0"
+        "illuminate/hashing": "^6.0",
+        "jhonyspicy/phpass": "dev-main"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0"
@@ -44,4 +44,3 @@
     },
     "minimum-stability": "dev"
 }
-
