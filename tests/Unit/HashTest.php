@@ -1,13 +1,18 @@
 <?php
 
-namespace jhonyspicy\LaravelWordpressLogin\Tests;
+namespace jhonyspicy\LaravelWordpressLogin\Tests\Unit;
 
 use Illuminate\Support\Facades\Hash;
+use jhonyspicy\LaravelWordpressLogin\Tests\TestCase;
 
 class HashTest extends TestCase
 {
-    /** @test */
-    public function ハッシュのチェック()
+    /**
+     * ハッシュのチェック
+     *
+     * @test
+     */
+    public function hashCheck()
     {
         $this->assertTrue(Hash::check('yPxOG(7NW77%b!v%CMwQP#MW', '$P$BAEJQxlgehZdSE8bHGrajhFHfj0Y/20'));
         $this->assertTrue(Hash::check('RKTUABPdDkX1*HCuD@*3DStp', '$P$BQKoPo5GBV8i/F3x9YF2XL41dDeYKb.'));
@@ -16,15 +21,19 @@ class HashTest extends TestCase
         $this->assertTrue(Hash::check('#5GsH0zRrX*%l&DeHg15hHei', '$P$BRUES.82VoHXhP5SY2Kkl0tlFQgRm80'));
     }
 
-    /** @test */
-    public function 正しくハッシュ化できる()
+    /**
+     * 正しくハッシュ化できる
+     *
+     * @test
+     */
+    public function canBeHashedCorrectly()
     {
         $hashed1 = Hash::make('1234');
         $hashed2 = Hash::make('1234');
 
         $this->assertNotEquals($hashed1, $hashed2);
 
-        $this->assertMatchesRegularExpression('/^\$(P|H)\$/', $hashed1);
-        $this->assertMatchesRegularExpression('/^\$(P|H)\$/', $hashed2);
+        self::assertRegExp('/^\$(P|H)\$/', $hashed1);
+        self::assertRegExp('/^\$(P|H)\$/', $hashed2);
     }
 }
