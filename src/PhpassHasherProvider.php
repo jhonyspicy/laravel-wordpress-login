@@ -7,13 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class PhpassHasherProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
-     */
-    public function boot()
+    public function boot(): void
     {
         Hash::extend('phpass', function (Application $app) {
             return new PhpassHasher($this->app['config']['hashing.phpass'] ?? []);
