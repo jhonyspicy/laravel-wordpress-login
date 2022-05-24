@@ -9,12 +9,13 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
-        "illuminate/hashing": "^6.0",
+        "php": "^8.0",
+        "illuminate/hashing": "^8.0 || ^9.0",
         "jhonyspicy/phpass": "dev-main"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0"
+        "orchestra/testbench": "^7.5",
+        "laravel/legacy-factories": "^1.3"
     },
     "autoload": {
         "psr-4": {
@@ -29,7 +30,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "jhonyspicy\\LaravelWordpressLogin\\Tests\\": "tests/"
+            "jhonyspicy\\LaravelWordpressLogin\\Tests\\": "tests/",
+            "Database\\Factories\\": "database/factories/"
         }
     },
     "scripts": {
@@ -44,4 +46,3 @@
     },
     "minimum-stability": "dev"
 }
-

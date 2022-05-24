@@ -1,6 +1,7 @@
 <?php
 namespace jhonyspicy\LaravelWordpressLogin\Tests;
 
+use Illuminate\Foundation\Application;
 use jhonyspicy\LaravelWordpressLogin\PhpassHasherProvider;
 use jhonyspicy\LaravelWordpressLogin\Tests\Resource\Provider;
 use jhonyspicy\LaravelWordpressLogin\Tests\Resource\User;
@@ -11,13 +12,27 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
-        $this->withFactories(__DIR__ . '/../database/factory');
+        try {
+            $this->withFactories(__DIR__ . '/../database/factories');
+        } catch (\Exception $e) {
+            exit($e->getMessage());
+        }
+    }
+
+
+    protected function resolveApplication(): Application
+    {
+        $app = parent::resolveApplication();
+
+        $app->useEnvironmentPath(__DIR__ . '/../');
+
+        return $app;
     }
 
     /**
-     * @param \Illuminate\Foundation\Application $app
+     * @param Application $app
      *
-     * @return array
+     * @return array<int, class-string>
      */
     protected function getPackageProviders($app)
     {

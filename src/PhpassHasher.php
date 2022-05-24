@@ -16,18 +16,8 @@ use RuntimeException;
  */
 class PhpassHasher extends AbstractHasher implements HasherContract
 {
-    /**
-     * @var PasswordHash
-     */
-    private $hasher;
+    private PasswordHash $hasher;
 
-    /**
-     * Create a new hasher instance.
-     *
-     * @param array $options
-     *
-     * @return void
-     */
     public function __construct(array $options = [])
     {
         $iterationCount = $options['iteration_count'] ?? 8;

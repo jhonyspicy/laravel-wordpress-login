@@ -33,7 +33,8 @@ class HashTest extends TestCase
 
         $this->assertNotEquals($hashed1, $hashed2);
 
-        self::assertRegExp('/^\$(P|H)\$/', $hashed1);
-        self::assertRegExp('/^\$(P|H)\$/', $hashed2);
+        foreach (compact(['hashed1', 'hashed2']) as $hashed) {
+            self::assertMatchesRegularExpression('/^\$(P|H)\$/', $hashed);
+        }
     }
 }

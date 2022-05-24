@@ -11,10 +11,10 @@ class LoginTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function サンプルデータでログイン()
+    public function userLogin()
     {
-        $user = factory(User::class)->create([
-            'password' => Hash::make('secret')
+        $user = User::factory()->create([
+            'password' => Hash::make('secret'),
         ]);
 
         $this->assertCount(1, User::all());
